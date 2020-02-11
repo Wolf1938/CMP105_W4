@@ -6,6 +6,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	input = in;
 
 	player.setInput(input);
+	enemy.SetWindow(window);
 }
 
 Level::~Level()
@@ -28,6 +29,7 @@ void Level::handleInput(float dt)
 void Level::update(float dt)
 {
 	player.handleInput(dt);
+	enemy.Update(dt);
 }
 
 // Render level
@@ -35,7 +37,8 @@ void Level::render()
 {
 	beginDraw();
 
-	window->draw(player.testSprite);
+	window->draw(player.sprite);
+	window->draw(enemy.sprite);
 
 	endDraw();
 }

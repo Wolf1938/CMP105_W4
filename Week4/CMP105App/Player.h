@@ -11,7 +11,7 @@ public:
 
 	void handleInput(float dt);
 
-	GameObject testSprite;
+	GameObject sprite;
 	sf::Texture texture;
 };
 

@@ -4,6 +4,7 @@
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
 #include "Player.h"
+#include "Enemy.h"
 #include <string.h>
 #include <iostream>
 
@@ -28,4 +29,5 @@ private:
 
 	// Level objects
 	Player player;
+	Enemy enemy;	
 };
