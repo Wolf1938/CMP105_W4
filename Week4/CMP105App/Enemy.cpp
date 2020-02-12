@@ -3,18 +3,12 @@
 
 Enemy::Enemy()
 {
-	// initialise game objects
-	texture.loadFromFile("gfx/goomba.png");
-
-	sprite.setTexture(&texture);
-	sprite.setSize(sf::Vector2f(100, 100));
-	sprite.setPosition(100, 400);
 
 	directionX = 1;
 	directionY = 1;
 }
 
-void Enemy::SetWindow(sf::RenderWindow* hwnd)
+void Enemy::setWindow(sf::RenderWindow* hwnd)
 {
 	window = hwnd;
 }

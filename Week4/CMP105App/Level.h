@@ -5,6 +5,7 @@
 #include "Framework/GameObject.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Cursor.h"
 #include <string.h>
 #include <iostream>
 
@@ -29,5 +30,6 @@ private:
 
 	// Level objects
 	Player player;
-	Enemy enemy;	
+	Enemy enemy[2];	
+	Cursor cursor;
 };

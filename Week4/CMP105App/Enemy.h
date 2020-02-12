@@ -8,7 +8,7 @@ public:
 	Enemy();
 	~Enemy();
 
-	void SetWindow(sf::RenderWindow* hwnd);
+	void setWindow(sf::RenderWindow* hwnd);
 	void Update(float dt);
 	
 	sf::RenderWindow* window;
