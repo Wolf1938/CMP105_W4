@@ -6,6 +6,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Cursor.h"
+#include "Background.h"
 #include <string.h>
 #include <iostream>
 
@@ -29,6 +30,7 @@ private:
 	Input* input;
 
 	// Level objects
+	Background background;
 	Player player;
 	Enemy enemy[2];	
 	Cursor cursor;

@@ -48,6 +48,22 @@ void Level::update(float dt)
 	enemy[0].Update(dt);
 	enemy[1].Update(dt);
 	cursor.SetPosition(input->getMouseX(), input->getMouseY());
+
+	sf::View view = window->getView();
+	if (player.sprite.getPosition().x > background.sprite.getSize().x - (view.getSize().x / 2))
+	{
+		view.setCenter(background.sprite.getSize().x - (view.getSize().x / 2), 675 / 2);
+	}
+	else if (player.sprite.getPosition().x < view.getSize().x /2)
+	{
+		view.setCenter(view.getSize().x / 2, 675 / 2);
+	}
+	else
+	{
+	view.setCenter(player.sprite.getPosition().x, 675/2);
+	}
+	window->setView(view);
+	
 }
 
 // Render level
@@ -55,6 +71,7 @@ void Level::render()
 {
 	beginDraw();
 
+	window->draw(background.sprite);
 	window->draw(player.sprite);
 	window->draw(enemy[0].sprite);
 	window->draw(enemy[1].sprite);
